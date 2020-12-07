@@ -3,7 +3,7 @@ from words import words
 
 word = random.choice(words)
 
-allowed_errors = 2
+allowed_errors = 10
 guesses = []
 done = False
 
@@ -26,5 +26,11 @@ while not done:
     for letter in word:
         if letter.lower() not in guesses:
             done = False
+    
+if done:
+    print(f"you found the word! it was {word}")
+else:
+    print(f"game over! the word was {word}")
+
 
 
