@@ -15,4 +15,11 @@ while not done:
             print("_", end=" ")
     print("")
 
+    guess = input(f"allowed guesses left {allowed_errors}, next guess: ")
+    guesses.append(guess.lower())
+    if guess.lower() not in word.lower():
+        allowed_errors -= 1
+        if allowed_errors == 0:
+            break 
+
 
